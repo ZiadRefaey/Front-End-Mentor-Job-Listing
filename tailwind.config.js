@@ -4,7 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        test: "#333",
+        darkGreen: "#5CA5A5",
+        lightGreen: "#EFF6F6",
+        lightGrey: "#B7C4C4",
+        darkGrey: "#7C8F8F",
+        Black: "#2B3939",
+      },
+      backgroundImage: {
+        "bg-header-desktop": "url('/src/assets/images/bg-header-desktop.svg')",
+        "bg-header-mobile": "url('/src/assets/images/bg-header-mobile.svg')",
       },
     },
   },
