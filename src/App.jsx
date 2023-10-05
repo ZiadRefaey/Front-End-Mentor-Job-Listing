@@ -2,7 +2,7 @@ import "./App.css";
 import TagsList from "./TagsList";
 import JobsList from "./JobsList";
 import { useState, useEffect } from "react";
-import data from "./data.json";
+import data from "./data";
 
 function App() {
   const [selectedTags, setSelectedTags] = useState([]);
