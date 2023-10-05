@@ -21,22 +21,22 @@ function JobItem({
   return (
     <div
       style={featured ? { borderLeft: "5px solid #5CA5A5" } : {}}
-      className="relative p-8 pb-6 lg:px-10 lg:py-8  flex items-start justify-center flex-col lg:flex-row bg-white rounded w-[95%] max-w-[1110px] md:justify-between"
+      className="relative p-8 pb-6 md:px-10 md:py-8  flex items-start justify-center flex-col md:flex-row bg-white rounded w-[95%] max-w-[1110px] md:justify-between"
     >
-      <div className="flex items-center justify-start flex-col gap-2 lg:flex-row h-full  md:gap-6 min-w-[40%]">
-        <div className="absolute h-12 w-12 object-contain top-0 left-6 translate-y-[-50%] lg:static lg:h-[88px] lg:w-[88px] lg:translate-y-[0px] ">
+      <div className="flex items-center justify-start flex-col gap-2 md:flex-row h-full  md:gap-6 min-w-[60%]">
+        <div className="absolute h-12 w-12 object-contain top-0 left-6 translate-y-[-50%] md:static md:min-h-[88px] md:min-w-[88px] md:translate-y-[0px] ">
           <img
             src={iconPath}
             alt={`${title}'s logo`}
             className="w-[100%] h-[100%] "
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col  justify-start w-full">
           <div className="flex items-center justify-between gap-2 min-w-[230px] mb-4 ">
-            <h3 className="text-darkGreen font-bold text-s md:text-lg">
+            <h3 className="text-darkGreen font-bold text-s md:text-md">
               {title}
             </h3>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2 flex-wrap ">
               {New ? (
                 <div className="bg-darkGreen rounded-xl text-white pt-1 pb-[1px] px-2">
                   NEW!
@@ -49,10 +49,10 @@ function JobItem({
               ) : null}
             </div>
           </div>
-          <h2 className="font-bold text-Black  text-start w-full lg:text-2xl hover:text-darkGreen cursor-pointer">
+          <h2 className="font-bold text-Black  text-start w-full md:text-2xl hover:text-darkGreen cursor-pointer">
             {position}
           </h2>
-          <div className="flex items-center justify-start text-start gap-2 w-full font-medium">
+          <div className="flex items-center justify-start text-start gap-2 w-full font-medium ">
             <p className="text-darkGrey">{postedAt}</p>
             <p className="pb-4 text-3xl">.</p>
             <p className="text-darkGrey">{contract}</p>
@@ -61,8 +61,8 @@ function JobItem({
           </div>
         </div>
       </div>
-      <div className="w-full h-[1px] bg-darkGrey mb-4 lg:hidden"></div>
-      <div className="flex justify-end self-center items-center flex-wrap gap-4 font-bold w-full">
+      <div className="w-full h-[1px] bg-darkGrey mb-4 md:hidden"></div>
+      <div className="flex justify-start md:justify-end self-center items-center flex-wrap gap-4 font-bold w-full">
         {languages.map((language, index) => (
           <button
             onClick={() => {
@@ -101,18 +101,26 @@ export default function JobsList({
   displayedJobs,
   selectedTags,
 }) {
-  const JobsListMargin = containerHeight / 2;
-
+  const [JobsListMargin, setJobsListMargin] = useState();
+  useEffect(
+    function () {
+      if (screenWidth < 1024) {
+        setJobsListMargin(containerHeight / 2 + 56);
+      } else setJobsListMargin(containerHeight / 2 + 40);
+      console.log(containerHeight / 2);
+    },
+    [containerHeight, screenWidth]
+  );
   return (
     <>
       <section
         key={data.id}
         style={
           screenWidth < 1024
-            ? { paddingTop: `${JobsListMargin + 56}px` }
-            : { paddingTop: `${JobsListMargin + 40}px` }
+            ? { paddingTop: `${72}px` }
+            : { paddingTop: `${72}px` }
         }
-        className="px-10 bg-lightGreen pb-8 flex items-center justify-center flex-col gap-5"
+        className="px-1 md:px-5 bg-lightGreen pb-8 flex items-center justify-center flex-col gap-8 md:gap-5"
       >
         {selectedTags.length
           ? displayedJobs.map((item, i) => (

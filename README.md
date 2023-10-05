@@ -21,11 +21,6 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -39,75 +34,66 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./JobListing.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## My process
+### My process
 
-First i started by initializing a repo on github and uploading my
+Step 1: GitHub Repository Initialization
+
+- Initialized a GitHub repository to manage version control, collaboration, and project management.
+
+Step 2: Initial Static Implementation
+
+- Created a static version of the website, laying the foundation for the project.
+- Designed the user interface without any dynamic data, following a "mobile-first" approach using Tailwind CSS.
+
+Step 3: Introduction of Dynamic Elements
+
+- Added dynamic elements using JavaScript to introduce interactivity.
+- Enabled changes to the layout and content based on user interactions and input.
+  Step 4: Styling and Refinement
+
+- Focused on styling and refining the visual aesthetics and user experience.
+- Incorporated detailed styling, animations, and user feedback for a polished interface.
+
+Step 5: Tags Filtering System Implementation
+
+- Implemented a tags filtering system, a key feature of the project.
+- Allowed users to select tags related to job positions and technologies.
+- The process included:
+  - Creating a list to store selected tags.
+  - Dynamically filtering the `data.json` dataset based on selected tags.
+  - Rendering the filtered job listings.
+  - Displaying the entire dataset if no tags were selected, ensuring a seamless user experience.
 
 ### Built with
 
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Tailwind css](https://tailwindcss.com/) - For styles
 
-### What I learned
+### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During the development process, I gained valuable insights and learned new techniques:
 
-To see how you can add code snippets, see below:
+- **Array Filtering**: I learned how to filter arrays efficiently based on criteria provided by other arrays. This skill is crucial for managing and displaying data dynamically.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- **Immutable Arrays**: Working with immutable arrays was a significant part of the project. Understanding how to update and manipulate data without modifying the original arrays is essential for maintaining data integrity.
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- **Exploring `.some()` and `.every()` Functions**: I had the opportunity to explore and leverage the power of the `.some()` and `.every()` functions in JavaScript. These functions are versatile and proved to be incredibly useful for handling complex logic and filtering operations.
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+These newly acquired skills will undoubtedly be a valuable asset in future projects, allowing me to build more efficient and interactive web applications.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I'd like to add a list which contains all the available tags and let the user choose from them instead of just clicking on the tags that already exist on the jobs listing
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Ray](https://www.frontendmentor.io/home)

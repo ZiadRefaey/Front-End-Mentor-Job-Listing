@@ -3,6 +3,7 @@ import SelectedTags from "./SelectedTags";
 import BgMobile from "./assets/images/bg-header-mobile.svg";
 import BgDesktop from "./assets/images/bg-header-desktop.svg";
 export default function TagsList({
+  containerHeight,
   setContainerHeight,
   screenWidth,
   selectedTags,
@@ -10,11 +11,11 @@ export default function TagsList({
 }) {
   useEffect(() => {
     const container = document.querySelector(".selected-tags-container");
-    if (container) {
-      const height = container.offsetHeight;
-      setContainerHeight(height);
-    }
-  }, []);
+
+    // const height = container.offsetHeight;
+    console.log(container.offsetHeight);
+    setContainerHeight(container.offsetHeight);
+  }, [screenWidth, containerHeight]);
 
   return (
     <>
@@ -33,7 +34,7 @@ export default function TagsList({
           />
         )}
         <div
-          // style={!selectedTags.length ? { display: "none" } : {}}
+          style={!selectedTags.length ? { display: "none" } : {}}
           className=" absolute m-auto w-[95%] p-5 bottom-0 left-[50%] bg-white translate-y-[50%] translate-x-[-50%] rounded-md flex justify-between items-center shadow-lg selected-tags-container xl:max-w-[1110px]"
         >
           <div className="flex flex-wrap  gap-4">

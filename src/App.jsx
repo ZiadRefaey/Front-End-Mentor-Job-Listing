@@ -7,7 +7,7 @@ import data from "./data.json";
 function App() {
   const [selectedTags, setSelectedTags] = useState([]);
   const [displayedJobs, setDisplayedJobs] = useState([]);
-  const [containerHeight, setContainerHeight] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(72);
   const [screenWidth, setScreenWidth] = useState(window.screen.width);
   useEffect(() => {
     const filteredData = data.filter((item) => {
@@ -31,6 +31,7 @@ function App() {
     <>
       <TagsList
         setContainerHeight={setContainerHeight}
+        containerHeight={containerHeight}
         screenWidth={screenWidth}
         selectedTags={selectedTags}
         setSelectedTags={setSelectedTags}
