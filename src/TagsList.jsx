@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SelectedTags from "./SelectedTags";
-import BgMobile from "./assets/images/bg-header-mobile.svg";
-import BgDesktop from "./assets/images/bg-header-desktop.svg";
+import BgMobile from "../public/assets/images/bg-header-mobile.svg";
+import BgDesktop from "../public/assets/images/bg-header-desktop.svg";
 export default function TagsList({
   containerHeight,
   setContainerHeight,

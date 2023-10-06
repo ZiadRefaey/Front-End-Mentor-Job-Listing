@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import data from "./data";
 function JobItem({
   title,
@@ -17,7 +18,6 @@ function JobItem({
   selectedTags,
 }) {
   const iconPath = data.find((item) => item.logo === logo)?.logo;
-
   return (
     <div
       style={featured ? { borderLeft: "5px solid #5CA5A5" } : {}}

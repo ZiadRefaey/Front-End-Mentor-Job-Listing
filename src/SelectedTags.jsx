@@ -1,4 +1,4 @@
-import iconRemove from "./assets/images/icon-remove.svg";
+import iconRemove from "../public/assets/images/icon-remove.svg";
 export default function SelectedTags({
   children,
   selectedTags,
