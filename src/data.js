@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     company: "Photosnap",
-    logo: "../public/photosnap.svg",
+    logo: "./assets/images/photosnap.svg",
     new: true,
     featured: true,
     position: "Senior Frontend Developer",
@@ -17,7 +17,7 @@ const data = [
   {
     id: 2,
     company: "Manage",
-    logo: "../public/manage.svg",
+    logo: "./assets/images/manage.svg",
     new: true,
     featured: true,
     position: "Fullstack Developer",
@@ -32,7 +32,7 @@ const data = [
   {
     id: 3,
     company: "Account",
-    logo: "../public/account.svg",
+    logo: "./assets/images/account.svg",
     new: true,
     featured: false,
     position: "Junior Frontend Developer",
@@ -47,7 +47,7 @@ const data = [
   {
     id: 4,
     company: "MyHome",
-    logo: "../public/myhome.svg",
+    logo: "./assets/images/myhome.svg",
     new: false,
     featured: false,
     position: "Junior Frontend Developer",
@@ -62,7 +62,7 @@ const data = [
   {
     id: 5,
     company: "Loop Studios",
-    logo: "../public/loop-studios.svg",
+    logo: "./assets/images/loop-studios.svg",
     new: false,
     featured: false,
     position: "Software Engineer",
@@ -77,7 +77,7 @@ const data = [
   {
     id: 6,
     company: "FaceIt",
-    logo: "../public/faceit.svg",
+    logo: "./assets/images/faceit.svg",
     new: false,
     featured: false,
     position: "Junior Backend Developer",
@@ -92,7 +92,7 @@ const data = [
   {
     id: 7,
     company: "Shortly",
-    logo: "../public/shortly.svg",
+    logo: "./assets/images/shortly.svg",
     new: false,
     featured: false,
     position: "Junior Developer",
@@ -107,7 +107,7 @@ const data = [
   {
     id: 8,
     company: "Insure",
-    logo: "../public/insure.svg",
+    logo: "./assets/images/insure.svg",
     new: false,
     featured: false,
     position: "Junior Frontend Developer",
@@ -122,7 +122,7 @@ const data = [
   {
     id: 9,
     company: "Eyecam Co.",
-    logo: "../public/eyecam-co.svg",
+    logo: "./assets/images/eyecam-co.svg",
     new: false,
     featured: false,
     position: "Full Stack Engineer",
@@ -137,7 +137,7 @@ const data = [
   {
     id: 10,
     company: "The Air Filter Company",
-    logo: "../public/the-air-filter-company.svg",
+    logo: "./assets/images/the-air-filter-company.svg",
     new: false,
     featured: false,
     position: "Front-end Dev",
