@@ -77,6 +77,28 @@ function JobItem({
           </button>
         ))}
 
+        <button
+          onClick={() => {
+            if (!selectedTags.find((el) => el === level)) {
+              setSelectedTags([...selectedTags, level]);
+            }
+          }}
+          className="flex items-center justify-between pl-2  bg-lightGreen text-darkGreen rounded-md pr-3 py-1 hover:bg-darkGreen hover:text-white md:text-xl"
+        >
+          {level}
+        </button>
+
+        <button
+          onClick={() => {
+            if (!selectedTags.find((el) => el === role)) {
+              setSelectedTags([...selectedTags, role]);
+            }
+          }}
+          className="flex items-center justify-between pl-2  bg-lightGreen text-darkGreen rounded-md pr-3 py-1 hover:bg-darkGreen hover:text-white md:text-xl"
+        >
+          {role}
+        </button>
+
         {tools.map((tool, index) => (
           <button
             onClick={() => {
@@ -118,12 +140,12 @@ export default function JobsList({
         style={
           screenWidth < 1024
             ? { paddingTop: `${72}px` }
-            : { paddingTop: `${72}px` }
+            : { paddingTop: `${50}px` }
         }
         className="px-1 md:px-5 bg-lightGreen pb-8 flex items-center justify-center flex-col gap-8 md:gap-5"
       >
         {selectedTags.length
-          ? displayedJobs.map((item, i) => (
+          ? displayedJobs.map((item) => (
               <JobItem
                 key={item.id}
                 title={item.company}
@@ -142,7 +164,7 @@ export default function JobsList({
                 setSelectedTags={setSelectedTags}
               />
             ))
-          : data.map((item, i) => (
+          : data.map((item) => (
               <JobItem
                 key={item.id}
                 title={item.company}

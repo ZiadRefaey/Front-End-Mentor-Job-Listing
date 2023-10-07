@@ -12,7 +12,11 @@ function App() {
   useEffect(() => {
     const filteredData = data.filter((item) => {
       return selectedTags.every(
-        (tag) => item.languages.includes(tag) || item.tools.includes(tag)
+        (tag) =>
+          item.languages.includes(tag) ||
+          item.tools.includes(tag) ||
+          item.role.includes(tag) ||
+          item.level.includes(tag)
       );
     });
     setDisplayedJobs(filteredData);
